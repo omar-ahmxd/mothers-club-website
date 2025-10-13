@@ -104,15 +104,40 @@
 }
 
 @media (max-width: 640px) {
+  .booking-content {
+    padding: 50px 20px;
+  }
+
   .booking-text h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
   }
 
   .booking-text p {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem;
   }
 
   .booking-details-simple {
     font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-content {
+    padding: 40px 16px;
+  }
+
+  .booking-text h2 {
+    font-size: 1.9rem;
+  }
+
+  .booking-text p {
+    font-size: 1.05rem;
+  }
+
+  .booking-details-simple {
+    font-size: 0.9rem;
   }
 }

@@ -15,12 +15,21 @@ const Contact = () => {
       <div className="container">
         <div className="contact-simple">
           <div className="contact-info-simple">
-            <h2>Get in Touch</h2>
-            <p>Have questions? I'm here to help!</p>
+            <h2>If you would like to book a consult, reach out to us!</h2>
+            <p>We're here to support you on your motherhood journey</p>
             <div className="contact-methods">
-              <div className="method">📧 info@themothersclub.com</div>
-              <div className="method">📱 WhatsApp</div>
-              <div className="method">📷 Instagram</div>
+              <div className="method">
+                <strong>Connect by Phone</strong>
+                <p>Call or WhatsApp at <a href="tel:+919840277088">+91 9840277088</a> for immediate support.</p>
+              </div>
+              <div className="method">
+                <strong>Send an Email</strong>
+                <p>For detailed inquiries, reach us at <a href="mailto:ayisha@themothersclub.in">ayisha@themothersclub.in</a></p>
+              </div>
+              <div className="method">
+                <strong>Follow on Instagram</strong>
+                <p>Join our vibrant community on Instagram</p>
+              </div>
             </div>
           </div>
 

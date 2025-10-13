@@ -3,36 +3,85 @@ import './Services.css';
 import { FaHeartbeat, FaBabyCarriage, FaHeart, FaSpa, FaUsers, FaGraduationCap } from 'react-icons/fa';
 
 const Services = () => {
-  const services = [
+  const workshops = [
     {
       icon: <FaHeartbeat />,
-      title: 'Prenatal Care',
-      desc: 'Comprehensive support during pregnancy with expert guidance and personalized care plans.'
+      title: 'Childbirth Education',
+      topics: [
+        'Physiology of Birth',
+        'Stages of Labour',
+        'Pain Relief Options',
+        'Birthing Positions',
+        'Comfort Measures',
+        'Interventions',
+        'Birth Plan',
+        'Golden Hour'
+      ]
     },
     {
       icon: <FaBabyCarriage />,
-      title: 'Postnatal Support',
-      desc: 'Recovery guidance and newborn care essentials for new mothers and families.'
+      title: 'Antenatal Breastfeeding',
+      topics: [
+        'Breast Anatomy',
+        'Milk Production',
+        'Golden Hour and Skin to Skin',
+        'Latch and Positioning',
+        'Feeding Patterns and Sleep',
+        'Pumping and Storage',
+        'Nutrition and Self Care',
+        'Feeding after C section'
+      ]
     },
     {
       icon: <FaHeart />,
-      title: 'Lactation Consulting',
-      desc: 'Professional breastfeeding support and troubleshooting for a successful nursing journey.'
+      title: 'VBAC (Vaginal Birth after C-section)',
+      topics: [
+        'Benefits, risks and success rates',
+        'Birth History and VBAC',
+        'Safe Pregnancy Planning',
+        'Signs of Labour and when to go to the hospital for VBAC',
+        'Natural Ways to encourage labour',
+        'Monitoring during labour',
+        'Emotional Preparation'
+      ]
     },
     {
       icon: <FaSpa />,
-      title: 'Wellness & Self-Care',
-      desc: 'Mental health support and self-care strategies for maternal wellbeing.'
+      title: 'Infant Massage',
+      topics: [
+        'Benefits of Infant Massage',
+        'Ideal oils for baby\'s skin',
+        'Best time and environment for massage',
+        'Step by Step demo of massage strokes',
+        'Massage for common concerns',
+        'Hands On practise'
+      ]
     },
     {
       icon: <FaUsers />,
-      title: 'Family Planning',
-      desc: 'Guidance on family planning decisions and preparing for your growing family.'
+      title: 'Holistic Women\'s Health',
+      topics: [
+        'Nutrition Essentials',
+        'Sleep Cycles and its Impact',
+        'Stress Management Techniques',
+        'Exercise and Alignment Correction',
+        'Gut Health and its role',
+        'Sustainable Self Care Plan',
+        'Setting Boundaries'
+      ]
     },
     {
       icon: <FaGraduationCap />,
-      title: 'Education & Training',
-      desc: 'Workshops and classes for expectant and new parents on various parenting topics.'
+      title: 'Mindful Motherhood',
+      topics: [
+        'Emotional Awareness & Resilience',
+        'Balanced Parenting Approach',
+        'Creating Moments of Connection',
+        'Mindful Communication',
+        'Breathwork and Grounding Practices',
+        'Mom Guilt & Perfectionism',
+        'Tools to stay present'
+      ]
     }
   ];
 
@@ -40,18 +89,21 @@ const Services = () => {
     <section id="services" className="services">
       <div className="services-container">
         <div className="section-header">
-          <span className="section-badge">Our Services</span>
-          <h2>Comprehensive Care for Every Stage</h2>
-          <p>Expert support tailored to your unique journey through motherhood</p>
+          <span className="section-badge">Workshops Offered</span>
+          <h2>Comprehensive Education for Every Stage</h2>
+          <p>Expert-led workshops designed to empower your motherhood journey</p>
         </div>
 
         <div className="services-grid">
-          {services.map((service, index) => (
+          {workshops.map((workshop, index) => (
             <div key={index} className="service-card">
-              <div className="service-icon">{service.icon}</div>
-              <h3>{service.title}</h3>
-              <p>{service.desc}</p>
-              <button className="learn-more">Learn More →</button>
+              <div className="service-icon">{workshop.icon}</div>
+              <h3>{workshop.title}</h3>
+              <ul className="workshop-topics">
+                {workshop.topics.map((topic, idx) => (
+                  <li key={idx}>{topic}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

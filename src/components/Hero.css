@@ -29,7 +29,7 @@
 /* Hero Logo */
 .hero-logo-container {
   position: absolute;
-  right: 10%;
+  right: 5%;
   top: 45%;
   transform: translateY(-50%);
   z-index: 10;
@@ -45,7 +45,7 @@
 /* Hero CTA Buttons */
 .hero-cta {
   position: absolute;
-  right: 12%;
+  right: 7%;
   top: 45%;
   transform: translateY(160px);
   z-index: 10;
@@ -175,7 +175,7 @@
   }
 
   .hero-logo-container {
-    right: 3%;
+    right: 2%;
   }
 
   .hero-logo {
@@ -183,6 +183,7 @@
   }
 
   .hero-cta {
+    right: 4%;
     bottom: 140px;
     flex-direction: column;
     gap: 12px;
@@ -209,21 +210,36 @@
 
 @media (max-width: 640px) {
   .hero {
-    min-height: 70vh;
+    min-height: 100vh;
   }
 
   .hero-logo-container {
     display: none;
   }
 
+  .hero-background img {
+    object-fit: contain;
+    object-position: center center;
+  }
+
   .hero-cta {
-    bottom: 120px;
-    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    bottom: 80px;
+    right: auto;
+    width: calc(100% - 40px);
+    max-width: 400px;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .hero-cta-btn {
-    padding: 12px 24px;
-    font-size: 14px;
+    padding: 16px 32px;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
   }
 
   .hero-content {
@@ -244,8 +260,34 @@
     font-size: 15px;
     padding: 14px 32px;
   }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 100vh;
+  }
 
   .hero-background img {
+    object-fit: contain;
     object-position: center center;
+  }
+
+  .hero-cta {
+    bottom: 60px;
+    width: calc(100% - 32px);
+    gap: 10px;
+  }
+
+  .hero-cta-btn {
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
   }
 }
