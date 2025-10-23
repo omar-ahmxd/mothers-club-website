@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,24 +23,49 @@ const Navbar = () => {
     }
   };
 
+  const handleHomeClick = (e) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      scrollToSection('home');
+    }
+    setMenuOpen(false);
+  };
+
+  const handleServicesClick = (e) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      scrollToSection('services');
+    } else {
+      window.location.href = '/#services';
+    }
+    setMenuOpen(false);
+  };
+
+  const handleContactClick = (e) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      scrollToSection('contact');
+    } else {
+      window.location.href = '/#contact';
+    }
+    setMenuOpen(false);
+  };
+
   return (
     <nav className={'navbar ' + (scrolled ? 'scrolled' : '')}>
       <div className="navbar-container">
-        <div className="logo">
+        <Link to="/" className="logo">
           <img src={require('../assets/images/logo-icon.png')} alt="Logo" className="logo-icon" />
           <div className="logo-text">
             <span className="logo-brand">The Mother's Club</span>
           </div>
-        </div>
+        </Link>
 
         <div className={'nav-menu ' + (menuOpen ? 'active' : '')}>
-          <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="nav-link active">Home</a>
-          <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} className="nav-link">Services</a>
-          <a href="#appointment" onClick={(e) => { e.preventDefault(); scrollToSection('appointment'); }} className="nav-link">Appointment</a>
-          <a href="#testimonials" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }} className="nav-link">Testimonials</a>
-          <a href="#doctor" onClick={(e) => { e.preventDefault(); scrollToSection('doctor'); }} className="nav-link">Doctor</a>
-          <a href="#news" onClick={(e) => { e.preventDefault(); scrollToSection('news'); }} className="nav-link">News</a>
-          <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className="nav-link">Contact</a>
+          <Link to="/" onClick={handleHomeClick} className="nav-link">Home</Link>
+          <a href="#services" onClick={handleServicesClick} className="nav-link">Services</a>
+          <Link to="/blogs" onClick={() => setMenuOpen(false)} className="nav-link">Blogs</Link>
+          <a href="#contact" onClick={handleContactClick} className="nav-link">Contact</a>
           <button className="search-btn">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM19 19l-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

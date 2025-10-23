@@ -9,18 +9,6 @@
   box-shadow: none;
 }
 
-.navbar .logo-small,
-.navbar .nav-link,
-.navbar .search-btn {
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.navbar.scrolled .logo-small,
-.navbar.scrolled .nav-link,
-.navbar.scrolled .search-btn {
-  text-shadow: none;
-}
-
 .navbar-container {
   max-width: 100%;
   margin: 0;
@@ -84,7 +72,7 @@
 .nav-link {
   font-size: 15px;
   font-weight: 400;
-  color: var(--text-dark);
+  color: var(--primary-coral);
   cursor: pointer;
   position: relative;
   transition: color 0.3s ease;
@@ -109,7 +97,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-dark);
+  color: var(--primary-coral);
   transition: color 0.3s ease;
 }
 

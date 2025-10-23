@@ -11,6 +11,10 @@ const Hero = () => {
     }
   };
 
+  const openWhatsApp = () => {
+    window.open('https://wa.me/919884011146', '_blank');
+  };
+
   return (
     <section id="home" className="hero">
       <div className="hero-background">
@@ -22,7 +26,7 @@ const Hero = () => {
       </div>
 
       <div className="hero-cta">
-        <button className="btn btn-secondary hero-cta-btn" onClick={() => scrollToSection('appointment')}>
+        <button className="btn btn-secondary hero-cta-btn" onClick={openWhatsApp}>
           Book Consultation
         </button>
         <button className="btn btn-secondary hero-cta-btn" onClick={() => scrollToSection('services')}>

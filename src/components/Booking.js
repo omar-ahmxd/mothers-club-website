@@ -3,6 +3,10 @@ import './Booking.css';
 import bookingBg from '../assets/images/booking-bg.png';
 
 const Booking = () => {
+  const openWhatsApp = () => {
+    window.open('https://wa.me/919884011146', '_blank');
+  };
+
   return (
     <section id="booking" className="booking section">
       <div className="booking-background">
@@ -16,7 +20,7 @@ const Booking = () => {
           <div className="booking-details-simple">
             Transform your motherhood experience with personalized support and expert guidance. We're here to help you every step of the way.
           </div>
-          <button className="btn btn-primary">Book Now</button>
+          <button className="btn btn-primary" onClick={openWhatsApp}>Book Now</button>
         </div>
       </div>
     </section>

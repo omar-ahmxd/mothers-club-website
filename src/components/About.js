@@ -36,41 +36,45 @@ const About = () => {
           </div>
 
           <div className="credentials-layout">
-            <div className="cert-category-block maternal-block">
+            <div className="cert-category-block doula-block">
               <div className="cert-category-header">
                 <div className="cert-category-icon">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                   </svg>
                 </div>
-                <h3>Maternal Education</h3>
+                <h3>Childbirth Education & Birth Support</h3>
               </div>
               <ul className="cert-list">
                 <li>
                   <span className="cert-check">✓</span>
                   <div className="cert-details">
-                    <strong>Diploma in Applied Nutrition</strong>
-                    <span>Food Sciences and Dietetics</span>
+                    <strong>AMANI Birth – Advanced Childbirth Educators & Advanced Labour & Birth Doula</strong>
                   </div>
                 </li>
                 <li>
                   <span className="cert-check">✓</span>
                   <div className="cert-details">
-                    <strong>Certified Infant Massage Educator</strong>
+                    <strong>Certified Body Ready Method Pro</strong>
                   </div>
                 </li>
                 <li>
                   <span className="cert-check">✓</span>
                   <div className="cert-details">
-                    <strong>Internationally Certified Parenting Coach</strong>
+                    <strong>ICEA Certified Birth Doula</strong>
                   </div>
                 </li>
                 <li>
                   <span className="cert-check">✓</span>
                   <div className="cert-details">
-                    <strong>Certified in Neuroscience for Parents</strong>
+                    <strong>Certified VBAC Doula</strong>
+                  </div>
+                </li>
+                <li>
+                  <span className="cert-check">✓</span>
+                  <div className="cert-details">
+                    <strong>Certified Silent Birthkeeper</strong>
                   </div>
                 </li>
               </ul>
@@ -83,7 +87,7 @@ const About = () => {
                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h3>Lactation Support</h3>
+                <h3>Lactation & Infant Care</h3>
               </div>
               <ul className="cert-list">
                 <li>
@@ -95,14 +99,14 @@ const About = () => {
                 <li>
                   <span className="cert-check">✓</span>
                   <div className="cert-details">
-                    <strong>Certified HTTP Trainer</strong>
-                    <span>Hospital Team Training Programme</span>
+                    <strong>Certified HTP Trainer</strong>
+                    <span>Hospital Team Training Program</span>
                   </div>
                 </li>
                 <li>
                   <span className="cert-check">✓</span>
                   <div className="cert-details">
-                    <strong>Certified in Infant Feeding</strong>
+                    <strong>Certified Infant Massage Trainer</strong>
                   </div>
                 </li>
                 <li>
@@ -114,39 +118,40 @@ const About = () => {
               </ul>
             </div>
 
-            <div className="cert-category-block doula-block">
+            <div className="cert-category-block maternal-block">
               <div className="cert-category-header">
                 <div className="cert-category-icon">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-                    <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h3>Childbirth Education & Doula Support</h3>
+                <h3>Maternal Health & Support</h3>
               </div>
               <ul className="cert-list">
                 <li>
                   <span className="cert-check">✓</span>
                   <div className="cert-details">
-                    <strong>Advanced AMANI Birth Certified Educator and Doula</strong>
+                    <strong>Certified Parenting Coach</strong>
                   </div>
                 </li>
                 <li>
                   <span className="cert-check">✓</span>
                   <div className="cert-details">
-                    <strong>Advanced Certified VBAC Doula</strong>
+                    <strong>Certified in Maternal, Infant, Young Child and Adolescent Nutrition</strong>
                   </div>
                 </li>
                 <li>
                   <span className="cert-check">✓</span>
                   <div className="cert-details">
-                    <strong>Certified Body Ready Method Pro</strong>
+                    <strong>Certified in Neuroscience for Parents</strong>
                   </div>
                 </li>
                 <li>
                   <span className="cert-check">✓</span>
                   <div className="cert-details">
-                    <strong>Certified Silent Birthkeeper</strong>
+                    <strong>Internationally Accredited Diploma in Nutrition and Gut Health</strong>
                   </div>
                 </li>
               </ul>
@@ -154,111 +159,34 @@ const About = () => {
           </div>
         </div>
 
-        {/* Achievements Section */}
-        <div className="achievements-section">
+        {/* Gallery Section */}
+        <div className="gallery-section">
           <div className="section-title-elegant">
-            <span className="section-subtitle">Global Recognition</span>
-            <h2>International Speaking Engagements</h2>
+            <span className="section-subtitle">Moments</span>
+            <h2>Gallery</h2>
             <p className="section-description">
-              Sharing expertise and insights at prestigious international conferences
+              Capturing beautiful moments and memories
             </p>
           </div>
 
-          <div className="achievements-timeline">
-            <div className="timeline-item">
-              <div className="timeline-year">2022</div>
-              <div className="timeline-content">
-                <div className="achievement-card">
-                  <div className="achievement-icon">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" strokeWidth="2"/>
-                      <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2"/>
-                    </svg>
-                  </div>
-                  <div className="achievement-details">
-                    <h4>International Breastfeeding Conference</h4>
-                    <p className="achievement-topic">Topic: Clubfeet and Exclusive Breastfeeding</p>
-                    <span className="achievement-badge">Speaker</span>
-                  </div>
-                </div>
-                <div className="achievement-card">
-                  <div className="achievement-icon">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" strokeWidth="2"/>
-                      <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2"/>
-                    </svg>
-                  </div>
-                  <div className="achievement-details">
-                    <h4>ILCA Conference</h4>
-                    <p className="achievement-topic">Topic: Clubfeet and Exclusive Breastfeeding</p>
-                    <span className="achievement-badge">Speaker</span>
-                  </div>
-                </div>
-                <div className="achievement-card">
-                  <div className="achievement-icon">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" strokeWidth="2"/>
-                      <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2"/>
-                    </svg>
-                  </div>
-                  <div className="achievement-details">
-                    <h4>Coimbatore Birth Convention</h4>
-                    <p className="achievement-topic">Topic: Mothering the Postpartum Mother</p>
-                    <span className="achievement-badge">Speaker</span>
-                  </div>
-                </div>
-              </div>
+          <div className="gallery-grid">
+            <div className="gallery-item">
+              <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=600&h=400&fit=crop" alt="Gallery 1" />
             </div>
-
-            <div className="timeline-item">
-              <div className="timeline-year">2023</div>
-              <div className="timeline-content">
-                <div className="achievement-card">
-                  <div className="achievement-icon">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" strokeWidth="2"/>
-                      <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2"/>
-                    </svg>
-                  </div>
-                  <div className="achievement-details">
-                    <h4>iLactation Conference</h4>
-                    <p className="achievement-topic">Topic: Clubfeet and Exclusive Breastfeeding</p>
-                    <span className="achievement-badge">Speaker</span>
-                  </div>
-                </div>
-                <div className="achievement-card">
-                  <div className="achievement-icon">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" strokeWidth="2"/>
-                      <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2"/>
-                    </svg>
-                  </div>
-                  <div className="achievement-details">
-                    <h4>India's Online Lactation Conference</h4>
-                    <p className="achievement-topic">Topic: Birth Team Supporting Breastfeeding Outcomes</p>
-                    <span className="achievement-badge">Speaker</span>
-                  </div>
-                </div>
-              </div>
+            <div className="gallery-item">
+              <img src="https://images.unsplash.com/photo-1578496781197-b85385c7f0b3?w=600&h=400&fit=crop" alt="Gallery 2" />
             </div>
-
-            <div className="timeline-item">
-              <div className="timeline-year">2025</div>
-              <div className="timeline-content">
-                <div className="achievement-card">
-                  <div className="achievement-icon">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" strokeWidth="2"/>
-                      <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2"/>
-                    </svg>
-                  </div>
-                  <div className="achievement-details">
-                    <h4>I-OLC Conference</h4>
-                    <p className="achievement-topic">Topic: Breastfeeding Challenges across Cultures</p>
-                    <span className="achievement-badge">Speaker</span>
-                  </div>
-                </div>
-              </div>
+            <div className="gallery-item">
+              <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&h=400&fit=crop" alt="Gallery 3" />
+            </div>
+            <div className="gallery-item">
+              <img src="https://images.unsplash.com/photo-1614789924411-b50a1c0e06fa?w=600&h=400&fit=crop" alt="Gallery 4" />
+            </div>
+            <div className="gallery-item">
+              <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop" alt="Gallery 5" />
+            </div>
+            <div className="gallery-item">
+              <img src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?w=600&h=400&fit=crop" alt="Gallery 6" />
             </div>
           </div>
         </div>
