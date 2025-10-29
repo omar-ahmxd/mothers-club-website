@@ -42,7 +42,7 @@ The evidence is clear: skilled lactation support in hospitals is not a luxury bu
       author: 'Ayisha Chandni',
       readTime: '5 min read',
       date: 'August 1, 2025',
-      image: require('../assets/images/continuous-labor-support-article2.png'),
+      image: require('../assets/images/beyond-individual-choice.png'),
       content: `When we talk about breastfeeding, the conversation often centers on individual choice and personal determination. But here's what I've learned: no mother succeeds in isolation. The difference between a supported breastfeeding journey and an abandoned one often comes down to the strength of the networks surrounding her.
 
 It's time we shift from asking "Why didn't she try harder?" to "How can we build systems that make success possible?"
@@ -128,7 +128,7 @@ What does meaningful support for breastfeeding mothers look like in your communi
       author: 'Ayisha Chandni',
       readTime: '4 min read',
       date: 'July 31, 2025',
-      image: require('../assets/images/community-fourth-trimester-article3.png'),
+      image: require('../assets/images/ethics-maternal-health.png'),
       content: `Over the past few years, working with thousands of mothers as a birth worker, lactation professional and parenting coach, I've seen how social media can empower and mislead mothers in equal measure.
 
 Many of us in this space stepped into this work because we wanted to create something meaningful. Something real. A space where mothers feel safe, informed, and heard. But I've also noticed a rising trend that deeply troubles me — the casual compromise of ethics in the name of engagement.
@@ -1468,6 +1468,56 @@ Your Guide to Confident Motherhood`
               {selectedArticle.content.split('\n\n').map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
+            </div>
+
+            <div className="article-comments-section">
+              <h3>Leave a Comment</h3>
+              <form className="comment-form" onSubmit={(e) => { e.preventDefault(); alert('Thank you for your comment! We appreciate your feedback.'); e.target.reset(); }}>
+                <div className="form-group">
+                  <textarea
+                    placeholder="Write a comment..."
+                    rows="6"
+                    required
+                  />
+                </div>
+                <div className="form-row">
+                  <div className="form-group">
+                    <input
+                      type="email"
+                      placeholder="Email (Address never made public)"
+                      required
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <input
+                    type="url"
+                    placeholder="Website (Optional)"
+                  />
+                </div>
+                <div className="form-options">
+                  <label className="checkbox-label">
+                    <input type="checkbox" />
+                    <span>Email me new posts</span>
+                  </label>
+                  <label className="checkbox-label">
+                    <input type="checkbox" />
+                    <span>Email me new comments</span>
+                  </label>
+                  <label className="checkbox-label">
+                    <input type="checkbox" />
+                    <span>Save my name, email, and website in this browser for the next time I comment</span>
+                  </label>
+                </div>
+                <button type="submit" className="comment-submit-btn">Post Comment</button>
+              </form>
             </div>
           </article>
         </div>
