@@ -1,7 +1,75 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './About.css';
+import gallery2 from '../assets/images/gallery/IMG-20250406-WA0036.jpg';
+import gallery3 from '../assets/images/gallery/IMG-20250406-WA0056.jpg';
+import gallery4 from '../assets/images/gallery/IMG-20250412-WA0062.jpg';
+import gallery5 from '../assets/images/gallery/IMG-20250413-WA0149.jpg';
+import gallery6 from '../assets/images/gallery/IMG-20250423-WA0042.jpg';
+import gallery7 from '../assets/images/gallery/TMC LinkedIn Article Template.png.PNG';
+import gallery8 from '../assets/images/gallery/1000106697_4949b1c7540b02ade8aac5e5553ff1d3-8_8_2023, 12_33_10 AM.jpg.JPG';
+import gallery9 from '../assets/images/gallery/1000106703_4949b1c7540b02ade8aac5e5553ff1d3-8_8_2023, 12_38_26 AM.jpg.JPG';
+import gallery10 from '../assets/images/gallery/1000106706_e563e886ed76c3e7d10410e3c956e397-8_8_2023, 12_58_46 AM.jpg.JPG';
+import gallery11 from '../assets/images/gallery/1000106715_7d71d4d95ef06e9a4daa74845f22fe90-8_8_2023, 12_27_25 AM.jpg.JPG';
+import gallery12 from '../assets/images/gallery/1000106727_4949b1c7540b02ade8aac5e5553ff1d3-8_8_2023, 12_32_04 AM.jpg.JPG';
+import gallery13 from '../assets/images/gallery/1000106782_bd0c5937343d0e5f40590b3d0d0c31e1-8_8_2023, 12_54_35 AM.jpg.JPG';
 
 const About = () => {
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+
+  const galleryImages = [
+    { src: gallery2, alt: "Workshop Session" },
+    { src: gallery3, alt: "Community Support" },
+    { src: gallery4, alt: "Maternal Care" },
+    { src: gallery5, alt: "Educational Session" },
+    { src: gallery6, alt: "Mother and Baby Care" },
+    { src: gallery8, alt: "The Mother's Club Workshop" },
+    { src: gallery7, alt: "TMC LinkedIn Article" },
+    { src: gallery9, alt: "Community Gathering" },
+    { src: gallery10, alt: "Educational Event" },
+    { src: gallery11, alt: "Mother Support Session" },
+    { src: gallery12, alt: "Workshop Activity" },
+    { src: gallery13, alt: "TMC Event" }
+  ];
+
+  const openLightbox = (index) => {
+    setSelectedImageIndex(index);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    setSelectedImageIndex(null);
+    document.body.style.overflow = 'unset';
+  };
+
+  const goToNext = () => {
+    setSelectedImageIndex((prev) =>
+      prev === galleryImages.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const goToPrev = () => {
+    setSelectedImageIndex((prev) =>
+      prev === 0 ? galleryImages.length - 1 : prev - 1
+    );
+  };
+
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (selectedImageIndex === null) return;
+
+      if (e.key === 'ArrowRight') {
+        goToNext();
+      } else if (e.key === 'ArrowLeft') {
+        goToPrev();
+      } else if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedImageIndex]);
+
   return (
     <section id="about" className="about section">
       <div className="container">
@@ -99,7 +167,7 @@ const About = () => {
                 <li>
                   <span className="cert-check">✓</span>
                   <div className="cert-details">
-                    <strong>Certified HTP Trainer</strong>
+                    <strong>Certified HTTP Trainer</strong>
                     <span>Hospital Team Training Program</span>
                   </div>
                 </li>
@@ -170,67 +238,29 @@ const About = () => {
           </div>
 
           <div className="gallery-grid">
-            <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=600&h=400&fit=crop" alt="Gallery 1" />
-            </div>
-            <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1578496781197-b85385c7f0b3?w=600&h=400&fit=crop" alt="Gallery 2" />
-            </div>
-            <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&h=400&fit=crop" alt="Gallery 3" />
-            </div>
-            <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1614789924411-b50a1c0e06fa?w=600&h=400&fit=crop" alt="Gallery 4" />
-            </div>
-            <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop" alt="Gallery 5" />
-            </div>
-            <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?w=600&h=400&fit=crop" alt="Gallery 6" />
-            </div>
+            {galleryImages.slice(0, 6).map((image, index) => (
+              <div
+                key={index}
+                className="gallery-item"
+                onClick={() => openLightbox(index)}
+              >
+                <img src={image.src} alt={image.alt} />
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Professional Associations Section */}
-        <div className="associations-section">
-          <div className="section-title-elegant">
-            <h2>Professional Associations</h2>
-            <div className="title-line"></div>
-          </div>
-          <div className="associations-grid-luxury">
-            <div className="association-card">
-              <img src={require('../assets/images/WhatsApp Image 2022-09-22 at 01.49.46 (1).jpeg')} alt="ICEA" />
-            </div>
-            <div className="association-card">
-              <img src={require('../assets/images/WhatsApp Image 2022-09-22 at 01.49.06 (1).jpeg')} alt="BPNI" />
-            </div>
-            <div className="association-card">
-              <img src={require('../assets/images/WhatsApp Image 2022-09-22 at 01.49.11 (1).jpeg')} alt="GOLD" />
-            </div>
-            <div className="association-card">
-              <img src={require('../assets/images/WhatsApp Image 2022-09-22 at 01.46.40 (1).jpeg')} alt="ILCA" />
-            </div>
-            <div className="association-card">
-              <img src={require('../assets/images/WhatsApp Image 2022-09-22 at 01.46.39 (1).jpeg')} alt="ALPI" />
-            </div>
-            {/* Duplicate for seamless loop */}
-            <div className="association-card">
-              <img src={require('../assets/images/WhatsApp Image 2022-09-22 at 01.49.46 (1).jpeg')} alt="ICEA" />
-            </div>
-            <div className="association-card">
-              <img src={require('../assets/images/WhatsApp Image 2022-09-22 at 01.49.06 (1).jpeg')} alt="BPNI" />
-            </div>
-            <div className="association-card">
-              <img src={require('../assets/images/WhatsApp Image 2022-09-22 at 01.49.11 (1).jpeg')} alt="GOLD" />
-            </div>
-            <div className="association-card">
-              <img src={require('../assets/images/WhatsApp Image 2022-09-22 at 01.46.40 (1).jpeg')} alt="ILCA" />
-            </div>
-            <div className="association-card">
-              <img src={require('../assets/images/WhatsApp Image 2022-09-22 at 01.46.39 (1).jpeg')} alt="ALPI" />
+        {/* Lightbox Modal */}
+        {selectedImageIndex !== null && (
+          <div className="gallery-lightbox" onClick={closeLightbox}>
+            <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+              <button className="lightbox-close" onClick={closeLightbox}>×</button>
+              <button className="lightbox-arrow lightbox-prev" onClick={goToPrev}>‹</button>
+              <button className="lightbox-arrow lightbox-next" onClick={goToNext}>›</button>
+              <img src={galleryImages[selectedImageIndex].src} alt={galleryImages[selectedImageIndex].alt} />
             </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );

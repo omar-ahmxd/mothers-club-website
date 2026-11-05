@@ -4,8 +4,9 @@ import Welcome from '../components/Welcome';
 import About from '../components/About';
 import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
+import Workshops from '../components/Workshops';
 import Testimonials from '../components/Testimonials';
-import Booking from '../components/Booking';
+import Associations from '../components/Associations';
 import Contact from '../components/Contact';
 
 const HomePage = () => {
@@ -15,9 +16,10 @@ const HomePage = () => {
       <Welcome />
       <About />
       <Services />
+      <Workshops />
       <WhyChooseUs />
       <Testimonials />
-      <Booking />
+      <Associations />
       <Contact />
     </>
   );

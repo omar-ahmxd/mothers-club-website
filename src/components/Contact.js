@@ -43,7 +43,7 @@ const Contact = () => {
                 </div>
                 <div className="contact-details">
                   <span className="contact-label">Phone Number</span>
-                  <a href="tel:+919840277088" className="contact-value">+91 9840277088</a>
+                  <a href="tel:+919884011146" className="contact-value">+91 9884011146</a>
                   <p className="contact-desc">Call or WhatsApp us anytime</p>
                 </div>
               </div>
@@ -76,19 +76,6 @@ const Contact = () => {
                   <a href="https://www.instagram.com/themothersclub.tmc?igsh=MThqNDUzZnA2YW5wZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="contact-value">@themothersclub.tmc</a>
                   <p className="contact-desc">Follow us for tips & updates</p>
                 </div>
-              </div>
-            </div>
-
-            <div className="contact-cta">
-              <div className="cta-content">
-                <h4>Prefer to talk directly?</h4>
-                <p>Book a free 15-minute consultation call with our experts</p>
-                <a href="tel:+919840277088" className="cta-button">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                  </svg>
-                  Schedule a Call
-                </a>
               </div>
             </div>
           </div>
