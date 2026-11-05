@@ -66,6 +66,7 @@ const Navbar = () => {
           <a href="#services" onClick={handleServicesClick} className="nav-link">Services</a>
           <Link to="/blogs" onClick={() => setMenuOpen(false)} className="nav-link">Blogs</Link>
           <a href="#contact" onClick={handleContactClick} className="nav-link">Contact</a>
+          <a href="https://courses.themothersclub.in/web/" className="login-btn" onClick={() => setMenuOpen(false)}>Login</a>
           <button className="search-btn">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM19 19l-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

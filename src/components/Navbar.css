@@ -88,6 +88,24 @@
   font-weight: 500;
 }
 
+/* Login Button */
+.login-btn {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--primary-coral);
+  padding: 9px 26px;
+  border-radius: 25px;
+  border: 2px solid var(--primary-coral);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.login-btn:hover {
+  background: transparent;
+  color: var(--primary-coral);
+}
+
 /* Search Button */
 .search-btn {
   background: transparent;
